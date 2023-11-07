@@ -3,6 +3,7 @@ const Food = require('../models/food')
 const foodRouter = express.Router()
 
 // Get All
+    // Get requests should return an empty array at first until you build the post request
 
     // Callback
 
@@ -36,7 +37,7 @@ const foodRouter = express.Router()
     foodRouter.post('/addFood', (req, res, next) => {
         const newFood = new Food(req.body)
         newFood.save((err, savedFood) => {
-            //insert missing code
+            //insert your code
         })
     })
 
@@ -47,9 +48,9 @@ const foodRouter = express.Router()
             const newFood = new Food(req.body)
             const savedFood = await newFood.save()
 
-            //insert missing code
+            //insert your code
         } catch(err){
-
+            // insert your code
         }
     })
 
@@ -77,11 +78,11 @@ const foodRouter = express.Router()
 
     // Callback
 
-    foodRouter.put( /* Insert your code here */ )
+    // Build a put request using Callbacks here
 
 
     // Async & Await
 
-    foodRouter.put( /* Insert your code here */ )
+    // Build a put request using Async and Await here
 
 module.exports = foodRouter

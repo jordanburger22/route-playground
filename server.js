@@ -10,21 +10,17 @@ app.use(morgan('dev'))
 mongoose.set('strictQuery', true)
 
 mongoose.connect(
-    'your connection string', 
-    () => console.log
+    'mongodb+srv://jordanburger22:.5HC5.FQHsqYVz8@cluster0.cihycu0.mongodb.net/posts-comments', 
+    () => console.log('Connected to the DB')
 )
 
 app.use('/food', require('./routes/foodRouter'))
 
 
 
-
-
 app.use((err, req, res, next) => {
     console.log(err)
-    if(err.name === "UnauthorizedError"){
-        res.status(err.status)
-    }
+    
     return res.send({errMsg: err.message})
 })
 
