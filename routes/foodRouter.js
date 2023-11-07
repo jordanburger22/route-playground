@@ -3,7 +3,7 @@ const Food = require('../models/food')
 const foodRouter = express.Router()
 
 // Get All
-    // Get requests should return an empty array at first until you build the post request
+    // Get requests should return an empty array at first until you build the post request and add items to the DB
 
     // Callback
 
@@ -84,5 +84,11 @@ const foodRouter = express.Router()
     // Async & Await
 
     // Build a put request using Async and Await here
+
+
+
+// Extra Credit Challenge
+
+    // Build a query get route using callbacks or async and await here
 
 module.exports = foodRouter
