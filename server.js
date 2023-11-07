@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 mongoose.set('strictQuery', true)
 
 mongoose.connect(
-    'mongodb+srv://jordanburger22:.5HC5.FQHsqYVz8@cluster0.cihycu0.mongodb.net/posts-comments', 
+    'your connection string', 
     () => console.log('Connected to the DB')
 )
 
